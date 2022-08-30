@@ -17,7 +17,7 @@
         <EntityTypeShape EntityType="BDPasajeModel.Rol" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPasajeModel.RolPagina" Width="1.5" PointX="3.75" PointY="32.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPasajeModel.Sexo" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDPasajeModel.Sucursal" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPasajeModel.Sucursal" Width="2.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPasajeModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPasajeModel.TipoBus" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPasajeModel.TipoContrato" Width="1.5" PointX="1.5" PointY="27.125" IsExpanded="true" />

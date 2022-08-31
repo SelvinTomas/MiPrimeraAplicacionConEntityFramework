@@ -26,6 +26,36 @@ namespace MiPrimeraAplicacionConEntityFramework.Controllers
                               }).ToList();
             }
             return View(listaMarca);
+
+            
         }
+        public ActionResult Agregar()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Agregar(MarcaCLS oMarcaCLS)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(oMarcaCLS);
+            }
+            else
+            {
+                using (var db = new BDPasajeEntities())
+                {
+                    Marca oMarca = new Marca();
+                    oMarca.NOMBRE = oMarcaCLS.nombre;
+                    oMarca.DESCRIPCION = oMarcaCLS.descripcion;
+                    oMarca.BHABILITADO = 1;
+                    db.Marca.Add(oMarca);
+                    db.SaveChanges();
+                }
+               
+            }
+            return RedirectToAction("Index");
+        }
+        
     }
 }

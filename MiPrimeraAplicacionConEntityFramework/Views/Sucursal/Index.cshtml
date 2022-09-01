@@ -4,6 +4,7 @@
     ViewBag.Title = "Index";
 }
 
+@Html.ActionLink("Agregar", "Agregar", "Sucursal", null, new { @class = "btn btn-primary" })
 <h2>Index</h2>
 <table class="table table-bordered table-hover">
     <thead>
@@ -17,12 +18,12 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.iidsucursal</td>
-            <td>@item.nombre</td>
-            <td>@item.telefono</td>
-            <td>@item.email</td>
-        </tr>
+            <tr>
+                <td>@item.iidsucursal</td>
+                <td>@item.nombre</td>
+                <td>@item.telefono</td>
+                <td>@item.email</td>
+            </tr>
         }
     </tbody>
 </table>

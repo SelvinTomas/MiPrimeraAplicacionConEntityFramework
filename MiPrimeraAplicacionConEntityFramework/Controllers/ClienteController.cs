@@ -42,6 +42,7 @@ namespace MiPrimeraAplicacionConEntityFramework.Controllers
                                  Text=sexo.NOMBRE,
                                  Value=sexo.IIDSEXO.ToString()
                              }).ToList();
+                listaSexo.Insert(0, new SelectListItem { Text = "--Seleccione--", Value = "" });
             }
         }
         public ActionResult Agregar()
@@ -55,6 +56,8 @@ namespace MiPrimeraAplicacionConEntityFramework.Controllers
         {
             if (!ModelState.IsValid)
             {
+                llenarSexo();
+                ViewBag.lista = listaSexo;
                 return View(oClienteCLS);
             }
             else
@@ -65,6 +68,12 @@ namespace MiPrimeraAplicacionConEntityFramework.Controllers
                     oCliente.NOMBRE = oClienteCLS.nombre;
                     oCliente.APPATERNO = oClienteCLS.appaterno;
                     oCliente.APMATERNO = oClienteCLS.apmaterno;
+                    oCliente.EMAIL = oClienteCLS.email;
+                    oCliente.DIRECCION = oClienteCLS.direccion;
+                    oCliente.IIDSEXO = oClienteCLS.iidsexo;
+                    oCliente.TELEFONOCELULAR = oClienteCLS.telefonocelular;
+                    oCliente.TELEFONOFIJO = oClienteCLS.telefonofijo;
+                    oCliente.BHABILITADO = 1;
 
                     db.Cliente.Add(oCliente);
                     db.SaveChanges();

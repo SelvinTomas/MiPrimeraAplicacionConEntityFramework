@@ -13,15 +13,17 @@
         <div class="container">
             <div class="navbar-header">
                 <!--
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    -->
                 @Html.ActionLink("Marca", "Index", "Marca", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Sucursal", "Index", "Sucursal", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Cliente", "Index", "Cliente", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Empleado", "Index", "Empleado", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Bus", "Index", "Bus", new { area = "" }, new { @class = "navbar-brand" })
 
             </div>
             <div class="navbar-collapse collapse">
@@ -35,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Selvin Tomás</p>
         </footer>
     </div>
 

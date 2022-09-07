@@ -38,6 +38,11 @@ namespace MiPrimeraAplicacionConEntityFramework.Models
         [Required(ErrorMessage = "Campo obligatorio")]
         public int iidtipoUsuario { get; set; }
 
+        [Display(Name = "Sueldo")]
+        [Range(0,100000,ErrorMessage ="Fuera de rango")]
+        [Required(ErrorMessage = "Campo obligatorio")]
+        public decimal sueldo { get; set; }
+
         [Display(Name = "Tipo de contrato")]
         [Required(ErrorMessage = "Campo obligatorio")]
         public int iidtipoContrato { get; set; }

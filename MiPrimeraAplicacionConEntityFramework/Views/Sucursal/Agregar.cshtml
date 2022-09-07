@@ -35,7 +35,7 @@
 
         <div>
             @Html.LabelFor(p => p.fechaApertura)
-            @Html.EditorFor(p => p.fechaApertura, new { htmlAttribute = new { @class = "form-control" } })
+            @Html.EditorFor(p => p.fechaApertura, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessage("fechaApertura", new { @class = "text-danger" })
         </div>      
         <div style="margin:auto">
